@@ -1,0 +1,224 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* ======== stream css overrides ======== */
+.str-video__call-stats {
+	max-width: 500px;
+	position: relative;
+}
+
+.str-video__speaker-layout__wrapper {
+	max-height: 700px;
+}
+
+.str-video__participant-details {
+	color: white;
+}
+
+.str-video__menu-container {
+	color: white;
+	font-family: 'Inter', sans-serif !important;
+}
+
+.str-video__device-settings__device-kind {
+	font-family: 'Inter', sans-serif !important;
+}
+
+.str-video__device-settings__device-selector-title {
+	font-size: 16px !important;
+	font-weight: 600;
+	letter-spacing: 0.025em;
+}
+
+.str-video__generic-menu--item {
+	letter-spacing: 0.025em;
+}
+
+.str-video__notification {
+	color: white;
+}
+
+.str-video__participant-list {
+	background-color: #1c1f2e;
+	padding: 10px;
+	border-radius: 10px;
+	color: white;
+	height: 100%;
+}
+
+.str-video__call-controls__button {
+	background-color: transparent;
+}
+
+.str-video__composite-button__button-group
+	.str-video__call-controls__button.str-video__menu-toggle-button {
+	background-color: transparent !important;
+}
+
+.str-video__composite-button__button-group
+	.str-video__call-controls__button.str-video__menu-toggle-button:hover {
+	background-color: #f75e55 !important;
+}
+
+.str-video__composite-button__button-group:hover.str-video__composite-button__button-group--active-secondary:hover {
+	background-color: #ed4f47 !important;
+}
+
+.str-video__call-controls__button--variant-danger:hover {
+	background-color: #ed4f47 !important;
+}
+
+.glassmorphism {
+	background: rgba(255, 255, 255, 0.05);
+	backdrop-filter: blur(1px);
+	-webkit-backdrop-filter: blur(1px);
+}
+.glassmorphism2 {
+	background: rgba(18, 17, 17, 0.25);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+}
+.glassmorphism3 {
+	background: rgba(255, 255, 255, 0.37);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+}
+
+/* ==== clerk class override ===== */
+
+.cl-internal-1o11va6:hover,
+.cl-internal-3fp9as:hover {
+	--accentHover: #0e78f9;
+}
+
+.cl-internal-1nn89fl {
+	color: inherit;
+}
+
+.cl-internal-zpbffa {
+	--accent: #0e78f9;
+}
+
+.cl-userButtonPopoverActionButtonIcon {
+	color: white;
+}
+
+.cl-logoBox {
+	height: 40px;
+}
+.cl-dividerLine {
+	background: #252a41;
+	height: 2px;
+}
+
+.cl-socialButtonsIconButton {
+	border: 3px solid #565761;
+}
+
+.cl-internal-wkkub3 {
+	color: white;
+}
+.cl-userButtonPopoverActionButton {
+	color: white;
+}
+
+.cl-internal-vsyo1i[data-variant='default']:focus-within,
+.cl-internal-vsyo1i[data-variant='default']:hover,
+.cl-internal-vsyo1i[data-variant='default'] {
+	box-shadow: none;
+}
+
+.cl-internal-vsyo1i[data-variant='default']:hover {
+	background-color: #2a304b;
+}
+.cl-internal-b6u84v[data-variant='solid'][data-color='primary'] {
+	box-shadow: none;
+}
+
+.cl-providerIcon__github {
+	filter: invert(1);
+}
+
+/* ==== react-datepicker class override ===== */
+
+.react-datepicker {
+	background-color: #1c1f2e !important;
+	border: none !important;
+}
+
+.react-datepicker__header {
+	background-color: #161823 !important;
+	border-bottom: 1px solid #13151f !important;
+}
+
+.react-datepicker__day--keyboard-selected, .react-datepicker__month-text--keyboard-selected, .react-datepicker__quarter-text--keyboard-selected, .react-datepicker__year-text--keyboard-selected {
+  background-color: #0e78f9 !important;
+  color: #fff !important;
+}
+
+.react-datepicker__current-month,
+.react-datepicker__day,
+.react-datepicker__day-name,
+.react-datepicker-time__header,
+.react-datepicker__time-list-item {
+	color: #fff !important;
+}
+.react-datepicker__day:hover {
+	background-color: #252a41 !important;
+}
+
+.react-datepicker__day--selected {
+	background-color: #0e78f9 !important;
+}
+
+.react-datepicker__time {
+	background-color: #1c1f2e !important;
+}
+
+.react-datepicker__time-container {
+  border-left: 1px solid #13151f !important;
+}
+
+.react-datepicker__time-list-item:hover {
+	background-color: #0e78f9 !important;
+}
+
+/* =============================== */
+
+@layer utilities {
+	.flex-center {
+		@apply flex justify-center items-center;
+	}
+
+	.flex-between {
+		@apply flex justify-between items-center;
+	}
+}
+
+/* animation */
+
+.show-block {
+	width: 100%;
+	max-width: 350px;
+	display: block;
+	animation: show 0.7s forwards linear;
+}
+
+@keyframes show {
+	0% {
+		animation-timing-function: ease-in;
+		width: 0%;
+	}
+
+	100% {
+		animation-timing-function: ease-in;
+		width: 100%;
+	}
+}
